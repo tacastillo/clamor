@@ -1,0 +1,26 @@
+<div class="ui grid" id="results-panel">
+    <div class="ui items fourteen wide column">
+        <div ng-if="results.length == 0">
+            <h3>No Results Found</h3>
+            <a ng-href="#/">Back to Search</a>
+        </div>
+        <div ng-repeat="show in results" class="item search-result">
+            <div class="image" id="image-result">
+                <img class="square" ng-src="{{show.artists[0].thumb_url}}">
+            </div>
+            <div class="content">
+                <a ng-click="showDetails($index)" class="header">{{show.title}}</a>
+                <div class="meta">
+                    <span>{{show.formatted_datetime}}</span>
+                    <span>{{show.formatted_location}}</span>
+                </div>
+                <div class="description">
+                    <p>{{show.description}}</p>
+                </div>
+                <div class="extra">
+                    {{show.artists[0].name}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

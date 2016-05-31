@@ -1,0 +1,14 @@
+.search-result {
+	max-width: 100%;
+}
+
+#image-result {
+	width: 30%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#results-panel {
+	height:90vh;
+	overflow-y: auto;
+}
